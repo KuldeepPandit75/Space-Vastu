@@ -1,0 +1,269 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "name": "Mars Transit Vehicle - 6 Crew",
+    "created": "2024-01-15T11:00:00.000Z",
+    "description": "Deep space transit habitat for 6 crew members on a 270-day journey to Mars"
+  },
+  "habitatConfig": {
+    "shape": "cylinder",
+    "radius": 8,
+    "height": 15,
+    "volume": 3015.929,
+    "levels": 3,
+    "mission": {
+      "crewSize": 6,
+      "missionDuration": 270,
+      "destination": "transit",
+      "launchVehicle": "starship",
+      "payloadConstraints": {
+        "maxDiameter": 9.0,
+        "maxLength": 18.0,
+        "maxMass": 150000
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": "sleep-1",
+      "type": "sleep",
+      "position": [3, 5, 3],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "sleep-2",
+      "type": "sleep",
+      "position": [-3, 5, 3],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "sleep-3",
+      "type": "sleep",
+      "position": [3, 5, -3],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "sleep-4",
+      "type": "sleep",
+      "position": [-3, 5, -3],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "sleep-5",
+      "type": "sleep",
+      "position": [0, 5, 4],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "sleep-6",
+      "type": "sleep",
+      "position": [0, 5, -4],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "recreation-1",
+      "type": "recreation",
+      "position": [0, 2, 0],
+      "rotation": [0, 0, 0],
+      "size": [4, 3, 2.1],
+      "volume": 25.2,
+      "color": "#84cc16",
+      "zone": "social",
+      "noiseLevel": "moderate"
+    },
+    {
+      "id": "food-1",
+      "type": "food",
+      "position": [4, 2, 0],
+      "rotation": [0, 0, 0],
+      "size": [3, 2.5, 2],
+      "volume": 15,
+      "color": "#10b981",
+      "zone": "clean",
+      "noiseLevel": "moderate"
+    },
+    {
+      "id": "medical-1",
+      "type": "medical",
+      "position": [0, 2, 4],
+      "rotation": [0, 0, 0],
+      "size": [4, 3, 2.5],
+      "volume": 30,
+      "color": "#ef4444",
+      "zone": "clean",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "laboratory-1",
+      "type": "laboratory",
+      "position": [-4, 2, 0],
+      "rotation": [0, 0, 0],
+      "size": [4, 2.5, 2.2],
+      "volume": 22,
+      "color": "#059669",
+      "zone": "clean",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "exercise-1",
+      "type": "exercise",
+      "position": [0, -2, 0],
+      "rotation": [0, 0, 0],
+      "size": [5, 3, 2.7],
+      "volume": 40.5,
+      "color": "#f97316",
+      "zone": "active",
+      "noiseLevel": "loud"
+    },
+    {
+      "id": "hygiene-1",
+      "type": "hygiene",
+      "position": [3, -2, 3],
+      "rotation": [0, 0, 0],
+      "size": [2, 2, 1.5],
+      "volume": 6,
+      "color": "#8b5cf6",
+      "zone": "wet",
+      "noiseLevel": "moderate"
+    },
+    {
+      "id": "hygiene-2",
+      "type": "hygiene",
+      "position": [-3, -2, 3],
+      "rotation": [0, 0, 0],
+      "size": [2, 2, 1.5],
+      "volume": 6,
+      "color": "#8b5cf6",
+      "zone": "wet",
+      "noiseLevel": "moderate"
+    },
+    {
+      "id": "hygiene-3",
+      "type": "hygiene",
+      "position": [3, -2, -3],
+      "rotation": [0, 0, 0],
+      "size": [2, 2, 1.5],
+      "volume": 6,
+      "color": "#8b5cf6",
+      "zone": "wet",
+      "noiseLevel": "moderate"
+    },
+    {
+      "id": "storage-1",
+      "type": "storage",
+      "position": [0, -5, 3],
+      "rotation": [0, 0, 0],
+      "size": [2.5, 2, 1.6],
+      "volume": 8,
+      "color": "#6b7280",
+      "zone": "technical",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "storage-2",
+      "type": "storage",
+      "position": [0, -5, -3],
+      "rotation": [0, 0, 0],
+      "size": [2.5, 2, 1.6],
+      "volume": 8,
+      "color": "#6b7280",
+      "zone": "technical",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "storage-3",
+      "type": "storage",
+      "position": [3, -5, 0],
+      "rotation": [0, 0, 0],
+      "size": [2.5, 2, 1.6],
+      "volume": 8,
+      "color": "#6b7280",
+      "zone": "technical",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "life-support-1",
+      "type": "life-support",
+      "position": [-3, -5, 0],
+      "rotation": [0, 0, 0],
+      "size": [3, 2.5, 2.7],
+      "volume": 20.25,
+      "color": "#dc2626",
+      "zone": "technical",
+      "noiseLevel": "loud",
+      "isFixed": true
+    },
+    {
+      "id": "communication-1",
+      "type": "communication",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "size": [2.5, 2, 1.6],
+      "volume": 8,
+      "color": "#7c3aed",
+      "zone": "technical",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "workstation-1",
+      "type": "workstation",
+      "position": [2, 0, 2],
+      "rotation": [0, 0, 0],
+      "size": [2.5, 2, 2],
+      "volume": 10,
+      "color": "#06b6d4",
+      "zone": "quiet",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "workstation-2",
+      "type": "workstation",
+      "position": [-2, 0, 2],
+      "rotation": [0, 0, 0],
+      "size": [2.5, 2, 2],
+      "volume": 10,
+      "color": "#06b6d4",
+      "zone": "quiet",
+      "noiseLevel": "quiet"
+    }
+  ],
+  "stats": {
+    "totalVolume": 3015.929,
+    "usedVolume": 302.95,
+    "freeVolume": 2712.979,
+    "usagePercentage": 10.0,
+    "crewVolumePerPerson": 502.7,
+    "complianceScore": 92,
+    "moduleCount": 21
+  }
+}

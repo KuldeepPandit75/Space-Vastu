@@ -1,0 +1,170 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "name": "Lunar Base - 4 Crew",
+    "created": "2024-01-15T10:30:00.000Z",
+    "description": "A compact lunar surface habitat designed for 4 crew members on a 180-day mission"
+  },
+  "habitatConfig": {
+    "shape": "cylinder",
+    "radius": 6,
+    "height": 12,
+    "volume": 1357.168,
+    "levels": 2,
+    "mission": {
+      "crewSize": 4,
+      "missionDuration": 180,
+      "destination": "moon",
+      "launchVehicle": "sls",
+      "payloadConstraints": {
+        "maxDiameter": 8.4,
+        "maxLength": 19.1,
+        "maxMass": 95000
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": "sleep-1",
+      "type": "sleep",
+      "position": [2, 3, 2],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "sleep-2",
+      "type": "sleep",
+      "position": [-2, 3, 2],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "sleep-3",
+      "type": "sleep",
+      "position": [2, 3, -2],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "sleep-4",
+      "type": "sleep",
+      "position": [-2, 3, -2],
+      "rotation": [0, 0, 0],
+      "size": [3, 2, 2],
+      "volume": 12,
+      "color": "#3b82f6",
+      "zone": "quiet",
+      "noiseLevel": "silent"
+    },
+    {
+      "id": "food-1",
+      "type": "food",
+      "position": [0, 0, 3],
+      "rotation": [0, 0, 0],
+      "size": [3, 2.5, 2],
+      "volume": 15,
+      "color": "#10b981",
+      "zone": "clean",
+      "noiseLevel": "moderate"
+    },
+    {
+      "id": "medical-1",
+      "type": "medical",
+      "position": [3, 0, 0],
+      "rotation": [0, 0, 0],
+      "size": [4, 3, 2.5],
+      "volume": 30,
+      "color": "#ef4444",
+      "zone": "clean",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "exercise-1",
+      "type": "exercise",
+      "position": [0, -3, 0],
+      "rotation": [0, 0, 0],
+      "size": [5, 3, 2.7],
+      "volume": 40.5,
+      "color": "#f97316",
+      "zone": "active",
+      "noiseLevel": "loud"
+    },
+    {
+      "id": "hygiene-1",
+      "type": "hygiene",
+      "position": [2, -3, 2],
+      "rotation": [0, 0, 0],
+      "size": [2, 2, 1.5],
+      "volume": 6,
+      "color": "#8b5cf6",
+      "zone": "wet",
+      "noiseLevel": "moderate"
+    },
+    {
+      "id": "hygiene-2",
+      "type": "hygiene",
+      "position": [-2, -3, 2],
+      "rotation": [0, 0, 0],
+      "size": [2, 2, 1.5],
+      "volume": 6,
+      "color": "#8b5cf6",
+      "zone": "wet",
+      "noiseLevel": "moderate"
+    },
+    {
+      "id": "storage-1",
+      "type": "storage",
+      "position": [0, 0, -3],
+      "rotation": [0, 0, 0],
+      "size": [2.5, 2, 1.6],
+      "volume": 8,
+      "color": "#6b7280",
+      "zone": "technical",
+      "noiseLevel": "quiet"
+    },
+    {
+      "id": "life-support-1",
+      "type": "life-support",
+      "position": [-3, 0, 0],
+      "rotation": [0, 0, 0],
+      "size": [3, 2.5, 2.7],
+      "volume": 20.25,
+      "color": "#dc2626",
+      "zone": "technical",
+      "noiseLevel": "loud",
+      "isFixed": true
+    },
+    {
+      "id": "workstation-1",
+      "type": "workstation",
+      "position": [0, 3, 0],
+      "rotation": [0, 0, 0],
+      "size": [2.5, 2, 2],
+      "volume": 10,
+      "color": "#06b6d4",
+      "zone": "quiet",
+      "noiseLevel": "quiet"
+    }
+  ],
+  "stats": {
+    "totalVolume": 1357.168,
+    "usedVolume": 191.75,
+    "freeVolume": 1165.418,
+    "usagePercentage": 14.1,
+    "crewVolumePerPerson": 339.3,
+    "complianceScore": 85,
+    "moduleCount": 12
+  }
+}
