@@ -1,6 +1,5 @@
 // src/app/page.tsx
 "use client";
-import { useState } from "react";
 import LandingPage from "../components/HabitatEditor/LandingPage";
 import MissionPath from "../components/HabitatEditor/MissionPath";
 import MissionParameters from "../components/HabitatEditor/MissionPrameters";
@@ -8,6 +7,7 @@ import Summary from "../components/HabitatEditor/Summary";
 import { MissionProvider } from "../components/HabitatEditor/MissionContext";
 import CharacterGuide from "@/components/HabitatEditor/CharacterGuide";
 import StarfieldBackground from "@/components/HabitatEditor/StarfieldBackground";
+import {useState} from "react"
 
 export default function Home() {
   const [step, setStep] = useState<number>(1);
