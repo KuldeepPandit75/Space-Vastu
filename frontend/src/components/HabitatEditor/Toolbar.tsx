@@ -75,7 +75,7 @@ export default function Toolbar() {
       case 'cylinder':
         return Math.PI * radius * radius * (height || 10);
       case 'sphere':
-        return (4/3) * Math.PI * radius * radius * radius;
+        return (4 / 3) * Math.PI * radius * radius * radius;
       case 'torus':
         const minorRadius = radius * 0.3;
         return 2 * Math.PI * Math.PI * radius * minorRadius * minorRadius;
@@ -129,7 +129,7 @@ export default function Toolbar() {
               <span>📋</span>
               <span>Presets</span>
             </button>
-            
+
             {showPresets && (
               <div className="absolute top-full left-0 mt-2 bg-gray-800 rounded-xl shadow-2xl min-w-72 z-20 border border-gray-600">
                 <div className="p-4">
@@ -209,9 +209,9 @@ export default function Toolbar() {
       </div>
 
       {/* Sample Designs Modal */}
-      <SampleDesigns 
-        isOpen={showSamples} 
-        onClose={() => setShowSamples(false)} 
+      <SampleDesigns
+        isOpen={showSamples}
+        onClose={() => setShowSamples(false)}
       />
     </div>
   );

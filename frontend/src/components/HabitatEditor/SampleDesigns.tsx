@@ -56,7 +56,7 @@ export default function SampleDesigns({ isOpen, onClose }: SampleDesignsProps) {
     try {
       const response = await fetch(`/sample-designs/${filename}`);
       if (!response.ok) {
-        throw new Error('Failed to load sample design');
+        throw new Error(`Failed to load sample design: ${response.status} ${response.statusText}`);
       }
       
       const designData = await response.json();
@@ -65,14 +65,43 @@ export default function SampleDesigns({ isOpen, onClose }: SampleDesignsProps) {
       if (success) {
         onClose();
       } else {
-        setError('Failed to import sample design');
+        setError('Failed to import sample design - invalid format');
       }
     } catch (err) {
-      setError('Error loading sample design');
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error loading sample design';
+      setError(errorMessage);
       console.error('Sample design load error:', err);
     } finally {
       setLoading(null);
     }
+  };
+
+  const handleFileImport = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    setError(null);
+    const reader = new FileReader();
+    
+    reader.onload = (e) => {
+      try {
+        const designData = JSON.parse(e.target?.result as string);
+        const success = importDesign(designData);
+        
+        if (success) {
+          onClose();
+        } else {
+          setError('Failed to import design - invalid format');
+        }
+      } catch (err) {
+        setError('Invalid JSON file format');
+        console.error('File import error:', err);
+      }
+    };
+    
+    reader.readAsText(file);
+    // Reset the input
+    event.target.value = '';
   };
 
   return (
@@ -160,8 +189,33 @@ export default function SampleDesigns({ isOpen, onClose }: SampleDesignsProps) {
           ))}
         </div>
 
-        {/* Info Box */}
+        {/* Custom Import Section */}
         <div className="mt-8 p-6 bg-gray-700 rounded-xl border border-gray-500">
+          <h5 className="text-white font-medium mb-4 flex items-center">
+            <span className="mr-2">📁</span>
+            Import Custom Design
+          </h5>
+          <div className="flex items-center space-x-4">
+            <input
+              type="file"
+              accept=".json"
+              onChange={handleFileImport}
+              className="hidden"
+              id="design-file-input"
+            />
+            <label
+              htmlFor="design-file-input"
+              className="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded-lg cursor-pointer transition-colors flex items-center space-x-2"
+            >
+              <span>📂</span>
+              <span>Choose JSON File</span>
+            </label>
+            <span className="text-gray-400 text-sm">Import your own habitat design from a JSON file</span>
+          </div>
+        </div>
+
+        {/* Info Box */}
+        <div className="mt-6 p-6 bg-gray-700 rounded-xl border border-gray-500">
           <h5 className="text-white font-medium mb-3 flex items-center">
             <span className="mr-2">💡</span>
             About Sample Designs
